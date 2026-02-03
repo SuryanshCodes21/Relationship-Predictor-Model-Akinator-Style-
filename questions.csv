@@ -1,0 +1,58 @@
+question_id,question_text,category,weight,positive_direction,red_flag,early_stop
+C1,"Do you feel heard when you express concerns?",Communication,5,1,0,0
+C2,"Can you talk openly about difficult or uncomfortable topics?",Communication,5,1,0,0
+C3,"Do discussions often turn into arguments?",Communication,4,0,0,0
+C4,"Do you avoid sharing your true feelings to prevent conflict?",Communication,4,0,0,0
+C5,"Does your partner listen without interrupting?",Communication,4,1,0,0
+C6,"Are misunderstandings clarified quickly?",Communication,3,1,0,0
+CF1,"Are conflicts resolved with mutual understanding?",Conflict,5,1,0,0
+CF2,"Do arguments end in silence or stonewalling?",Conflict,5,0,0,0
+CF3,"Do the same conflicts repeat without resolution?",Conflict,4,0,0,0
+CF4,"Has either partner threatened to break up during fights?",Conflict,5,0,1,1
+CF5,"Do conflicts escalate into personal attacks?",Conflict,4,0,0,0
+CF6,"Can you apologize and forgive after disagreements?",Conflict,4,1,0,0
+CF1,"Are conflicts resolved with mutual understanding?",Conflict,5,1,0,0
+CF2,"Do arguments end in silence or stonewalling?",Conflict,5,0,0,0
+CF3,"Do the same conflicts repeat without resolution?",Conflict,4,0,0,0
+CF4,"Has either partner threatened to break up during fights?",Conflict,5,0,1,1
+CF5,"Do conflicts escalate into personal attacks?",Conflict,4,0,0,0
+CF6,"Can you apologize and forgive after disagreements?",Conflict,4,1,0,0
+T1,"Do you trust your partner completely?",Trust,5,1,0,0
+T2,"Do you feel the need to check their phone or messages?",Trust,5,0,1,0
+T3,"Has trust been broken in the past?",Trust,4,0,1,0
+T4,"Do you feel secure when they are not around?",Trust,4,1,0,0
+T5,"Are promises usually kept?",Trust,4,1,0,0
+T6,"Do you doubt their honesty?",Trust,4,0,0,0
+E1,"Is your partner emotionally available when you need support?",Emotion,5,1,0,0
+E2,"Do you feel emotionally safe with your partner?",Emotion,5,1,0,0
+E3,"Do you feel lonely even while in the relationship?",Emotion,5,0,1,0
+E4,"Are your feelings validated rather than dismissed?",Emotion,4,1,0,0
+E5,"Do emotional conversations feel one-sided?",Emotion,4,0,0,0
+EF1,"Do both partners put equal effort into the relationship?",Effort,5,1,0,0
+EF2,"Who usually initiates important conversations?",Effort,4,1,0,0
+EF3,"Are sacrifices made willingly by both partners?",Effort,4,1,0,0
+EF4,"Does one partner feel taken for granted?",Effort,4,0,0,0
+EF5,"Do you feel appreciated for what you do?",Effort,4,1,0,0
+V1,"Do you agree on major life goals like marriage or children?",Values,5,1,0,0
+V2,"Are your career goals compatible?",Values,4,1,0,0
+V3,"Do you share similar values about money?",Values,4,1,0,0
+V4,"Do families support the relationship?",Values,3,1,0,0
+V5,"Are lifestyle choices aligned (religion, habits, priorities)?",Values,4,1,0,0
+A1,"Do you fear abandonment in this relationship?",Attachment,4,0,0,0
+A2,"Does jealousy frequently cause problems?",Attachment,4,0,0,0
+A3,"Do you feel independent yet emotionally connected?",Attachment,4,1,0,0
+A4,"Do you need constant reassurance from your partner?",Attachment,4,0,0,0
+A5,"Can you spend time apart without anxiety?",Attachment,4,1,0,0
+S1,"Is long-distance affecting your relationship?",Stress,3,0,0,0
+S2,"Do financial issues cause frequent conflicts?",Stress,4,0,0,0
+S3,"Are external pressures handled as a team?",Stress,4,1,0,0
+S4,"Does work or study stress spill into the relationship?",Stress,3,0,0,0
+S5,"Can you support each other during difficult times?",Stress,4,1,0,0
+AB1,"Has there been emotional manipulation or gaslighting?",Abuse,5,0,1,1
+AB2,"Has there been infidelity more than once?",Abuse,5,0,1,1
+AB3,"Do arguments involve threats or intimidation?",Abuse,5,0,1,1
+AB4,"Do you feel unsafe emotionally or physically?",Abuse,5,0,1,1
+AB5,"Are boundaries repeatedly ignored?",Abuse,5,0,1,1
+
+
+
