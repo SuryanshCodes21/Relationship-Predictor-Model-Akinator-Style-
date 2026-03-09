@@ -1,0 +1,142 @@
+question_id,question_text,category,weight,positive_direction,red_flag,early_stop,answer_type
+
+C1,Do you feel heard when you express concerns?,Communication,8,1,0,0
+C2,Do you resolve arguments without lasting resentment?,Communication,7,1,0,0
+C3,Do you and your partner communicate openly about feelings?,Communication,7,1,0,0
+C4,Can you share difficult topics without fear?,Communication,8,1,0,0
+C5,Do you feel your opinions are valued during disagreements?,Communication,6,1,0,0
+C6,Is there avoidance or silent treatment after arguments?,Communication,7,0,0,0
+C7,Is honesty prioritized in your conversations?,Communication,6,1,0,0
+C8,Do you feel blamed for most issues in the relationship?,Communication,7,0,0,0
+C9,Are conversations balanced, allowing both to speak?,Communication,5,1,0,0
+C10,Do you avoid some topics out of fear?,Communication,5,0,0,0
+C11,Do you feel your partner interrupts you often?,Communication,5,0,0,0
+C12,Is your partner open to feedback without defensiveness?,Communication,6,1,0,0
+C13,Are apologies given and accepted genuinely?,Communication,6,1,0,0
+C14,Does your partner listen to understand, not just to respond?,Communication,7,1,0,0
+C15,Do disagreements escalate quickly?,Communication,6,0,0,0
+C16,Is communication respectful and free of insults?,Communication,8,1,0,0
+C17,Do you clarify misunderstandings promptly?,Communication,6,1,0,0
+C18,Is sarcasm or mocking common in your conversations?,Communication,5,0,0,0
+C19,Do talks about issues end with solutions?,Communication,6,1,0,0
+C20,Are important conversations avoided?,Communication,5,0,0,0
+T1,Do you trust this person completely?,Trust,10,1,0,0
+T2,Has this person ever lied to you about something important?,Trust,9,0,1,0
+T3,Has your partner kept significant secrets from you?,Trust,8,0,0,0
+T4,Are you comfortable sharing passwords or private information?,Trust,5,1,0,0
+T5,Has jealousy ever caused problems in your relationship?,Trust,6,0,0,0
+T6,Can you rely on your partner in times of need?,Trust,9,1,0,0
+T7,Has your partner forgiven you for past mistakes?,Trust,6,1,0,0
+T8,Has your partner accused you of cheating without reason?,Trust,7,0,0,0
+T9,Does your partner respect your privacy?,Trust,8,1,0,0
+T10,Are financial matters discussed honestly?,Trust,7,1,0,0
+T11,Does your partner check your phone or social media without permission?,Trust,7,0,0,0
+T12,Can you leave your partner alone with your friends and feel comfortable?,Trust,5,1,0,0
+T13,Has your partner tried to control who you talk to?,Trust,6,0,0,0
+T14,Is your partner open about their past?,Trust,6,1,0,0
+T15,Are you able to be vulnerable without fear?,Trust,8,1,0,0
+T16,Do arguments damage your trust for each other?,Trust,7,0,0,0
+T17,Does your partner hide things from you?,Trust,6,0,0,0
+T18,Are promises kept consistently?,Trust,8,1,0,0
+T19,Do you worry your partner is unfaithful?,Trust,7,0,0,0
+T20,Can you forgive mistakes and move forward?,Trust,6,1,0,0
+R1,Does this person respect your boundaries?,Respect,8,1,0,0
+R2,Does your partner listen to your needs regarding personal space?,Respect,7,1,0,0
+R3,Are your beliefs and opinions respected even when you disagree?,Respect,6,1,0,0
+R4,Does your partner try to change your views against your will?,Respect,8,0,0,0
+R5,Are boundaries discussed and set clearly?,Respect,5,1,0,0
+R6,Do you feel pressured to conform to your partner’s wishes?,Respect,6,0,0,0
+R7,Are differences accepted without judgment?,Respect,6,1,0,0
+R8,Is your partner comfortable with your autonomy?,Respect,7,1,0,0
+R9,Do you feel your partner ignores your requests?,Respect,6,0,0,0
+R10,Has your partner ever made fun of your values?,Respect,7,0,0,0
+R11,Are your hobbies respected?,Respect,5,1,0,0
+R12,Does your partner threaten to leave if you disagree?,Respect,8,0,0,0
+R13,Can you ask for space without conflict?,Respect,6,1,0,0
+R14,Does your partner invade your privacy?,Respect,7,0,0,0
+R15,Are disagreements handled fairly?,Respect,6,1,0,0
+R16,Does your partner allow you to make independent choices?,Respect,7,1,0,0
+R17,Are family boundaries honored?,Respect,5,1,0,0
+R18,Does your partner dismiss your opinions?,Respect,7,0,0,0
+R19,Is your partner considerate of your feelings?,Respect,8,1,0,0
+R20,Are expectations discussed and agreed upon?,Respect,6,1,0,0
+K1,Do you share similar goals for the future?,Commitment,7,1,0,0
+K2,Does this person make consistent effort in the relationship?,Commitment,8,1,0,0
+K3,Do you feel equally prioritized in the relationship?,Commitment,7,1,0,0
+K4,Are future plans made jointly?,Commitment,7,1,0,0
+K5,Does your partner frequently cancel plans without explanation?,Commitment,5,0,0,0
+K6,Is your partner consistent in showing commitment?,Commitment,8,1,0,0
+K7,Are you looking forward to major milestones together?,Commitment,8,1,0,0
+K8,Do you feel secure in your relationship’s future?,Commitment,9,1,0,0
+K9,Does your partner make you a priority?,Commitment,8,1,0,0
+K10,Are important dates remembered?,Commitment,5,1,0,0
+K11,Are decisions made together?,Commitment,6,1,0,0
+K12,Is your partner involved in family matters?,Commitment,7,1,0,0
+K13,Does your partner avoid discussing the future?,Commitment,6,0,0,0
+K14,Is your partner present during important moments?,Commitment,7,1,0,0
+K15,Do you feel your partner’s effort matches yours?,Commitment,8,1,0,0
+K16,Has your partner abandoned you in critical times?,Commitment,7,0,0,0
+K17,Are roles and responsibilities clarified?,Commitment,6,1,0,0
+K18,Does your partner act on plans made together?,Commitment,8,1,0,0
+K19,Is supporting each other's personal growth important?,Commitment,7,1,0,0
+K20,Are disagreements about commitment common?,Commitment,7,0,0,0
+E1,Does this person support you during difficult times?,Emotional,8,1,0,0
+E2,Do you feel emotionally safe with this person?,Emotional,9,1,0,0
+E3,Do you feel safe being vulnerable with your partner?,Emotional,8,1,0,0
+E4,Does your partner validate your feelings?,Emotional,6,1,0,0
+E5,Is emotional support lacking during tough times?,Emotional,7,0,0,0
+E6,Can you openly cry or express sadness?,Emotional,6,1,0,0
+E7,Does your partner comfort you when you’re upset?,Emotional,8,1,0,0
+E8,Are you able to ask for emotional support?,Emotional,7,1,0,0
+E9,Does your partner ridicule your emotions?,Emotional,8,0,0,0
+E10,Is empathy shown during problems?,Emotional,7,1,0,0
+E11,Do you feel emotionally isolated?,Emotional,7,0,0,0
+E12,Are emotional needs communicated?,Emotional,6,1,0,0
+E13,Does your partner ignore your distress?,Emotional,7,0,0,0
+E14,Is emotional care mutual?,Emotional,8,1,0,0
+E15,Does your partner belittle your emotional pain?,Emotional,8,0,0,0
+E16,Are feelings discussed without judgment?,Emotional,6,1,0,0
+E17,Does your partner respect your emotional boundaries?,Emotional,7,1,0,0
+E18,Is your partner responsive to your struggles?,Emotional,8,1,0,0
+E19,Are emotions discussed and understood?,Emotional,7,1,0,0
+E20,Does your partner make you doubt your feelings?,Emotional,8,0,0,0
+P1,Are you physically comfortable around this person?,Physical,5,1,0,0
+P2,Is affection welcomed and reciprocated?,Physical,5,1,0,0
+P3,Do you ever feel uncomfortable with physical touch?,Physical,6,0,0,0
+P4,Is intimacy mutual and respectful?,Physical,7,1,0,0
+P5,Does your partner ignore physical boundaries?,Physical,8,0,0,0
+P6,Do you feel safe being physically close?,Physical,7,1,0,0
+P7,Are preferences about intimacy respected?,Physical,7,1,0,0
+P8,Has your partner pressured you sexually?,Physical,8,0,0,0
+P9,Is physical affection frequent?,Physical,6,1,0,0
+P10,Are displays of affection public and private?,Physical,6,1,0,0
+P11,Does your partner use touch to control?,Physical,7,0,0,0
+P12,Are physical needs discussed openly?,Physical,5,1,0,0
+P13,Is sexual activity consensual always?,Physical,10,1,0,0
+P14,Are comfort and safety prioritized during intimacy?,Physical,8,1,0,0
+P15,Does your partner respect “no” regarding touch?,Physical,10,1,0,0
+P16,Are physical boundaries checked regularly?,Physical,6,1,0,0
+P17,Do you feel anxiety about intimacy?,Physical,7,0,0,0
+P18,Are you comfortable initiating physical closeness?,Physical,7,1,0,0
+P19,Has your partner ever used threats related to sex?,Physical,10,0,0,0
+P20,Is touch used to express care?,Physical,7,1,0,0
+RF1,Has there ever been any form of abuse in this relationship?,red_flag,10,0,1,0
+RF2,Do you feel afraid of this person?,red_flag,10,0,1,0
+RF3,Has your partner ever threatened you or someone you love?,red_flag,10,0,1,0
+RF4,Has your partner made you feel unsafe at home?,red_flag,10,0,1,0
+RF5,Has there ever been forced sexual contact?,red_flag,10,0,1,0
+RF6,Has your partner ever restricted your access to family or friends?,red_flag,10,0,1,0
+RF7,Has your partner ever damaged your property out of anger?,red_flag,9,0,1,0
+RF8,Has your partner used insults or put-downs regularly?,red_flag,8,0,1,0
+RF9,Has your partner ever hurt you physically?,red_flag,10,0,1,0
+RF10,Has your partner threatened suicide to manipulate you?,red_flag,10,0,1,0
+RF11,Has your partner punished you for not obeying their wishes?,red_flag,10,0,1,0
+RF12,Has your partner controlled your finances against your will?,red_flag,10,0,1,0
+RF13,Has your partner stalked you or tracked your movements?,red_flag,10,0,1,0
+RF14,Has your partner isolated you from your support network?,red_flag,10,0,1,0
+RF15,Has your partner lied to others about you to damage your reputation?,red_flag,9,0,1,0
+RF16,Has your partner ever locked you out or in?,red_flag,10,0,1,0
+RF17,Has your partner forced you to take drugs or alcohol?,red_flag,10,0,1,0
+RF18,Has your partner ever threatened your pet or children?,red_flag,10,0,1,0
+RF19,Has your partner made you feel worthless or hopeless?,red_flag,10,0,1,0
+RF20,Has your partner refused medical care for you?,red_flag,10,0,1,0
