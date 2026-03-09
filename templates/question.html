@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+{% block title %}Question {{ step }} — RelationShift{% endblock %}
+
+{% block content %}
+<div class="card">
+
+  <!-- Header row -->
+    <!-- Header row -->
+  <div style="display:flex; align-items:center; gap:1rem; margin-bottom:1.5rem;">
+    <div class="orb" style="width:44px; height:44px; flex-shrink:0; margin:0;"></div>
+    <div>
+      <p style="color:var(--muted); font-size:0.78rem; letter-spacing:0.1em; text-transform:uppercase;">
+        Question {{ step }} of {{ total }}
+        &nbsp;·&nbsp;
+        <span style="color:#a78bfa;">{{ category }}</span>
+      </p>
+      <p style="color:var(--primary); font-size:0.85rem; font-style:italic;">
+        {{ flavour }}
+      </p>
+    </div>
+  </div>
+
+  <!-- Progress bar -->
+  <div class="progress-bar-wrap">
+    <div class="progress-bar-fill" style="width: {{ ((step / total) * 100) | int }}%;"></div>
+  </div>
+
+  <!-- Question text -->
+  <h2 style="font-size:1.2rem; color:var(--text); margin-bottom:2rem; line-height:1.5;">
+    {{ question }}
+  </h2>
+
+  <!-- Answer form -->
+  <form method="POST" action="/answer">
+    <input type="hidden" name="qid" value="{{ qid }}" />
+
+    {% for option in options %}
+    <button
+      type="submit"
+      name="answer"
+      value="{{ option }}"
+      class="btn-option"
+    >
+      <span style="color:var(--primary); margin-right:0.6rem;">◆</span>{{ option }}
+    </button>
+    {% endfor %}
+
+  </form>
+
+  <!-- Back link -->
+  {% if step > 1 %}
+  <div style="margin-top:1.5rem; text-align:center;">
+    <a href="/back" style="color:var(--muted); font-size:0.85rem; text-decoration:none;">
+      ← Go back
+    </a>
+  </div>
+  {% endif %}
+
+</div>
+
+<p class="footer">{{ step }} / {{ total }} answered</p>
+{% endblock %}
+
+{% block scripts %}
+<script>
+  document.querySelectorAll('.btn-option').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      // Visual feedback first
+      this.style.background = 'linear-gradient(135deg, #221d3a, #2e2750)';
+      this.style.color = '#c4b5fd';
+      this.style.borderColor = '#7c3aed';
+
+      // Disable OTHER buttons only, not the one being clicked
+      var clicked = this;
+      document.querySelectorAll('.btn-option').forEach(function(b) {
+        if (b !== clicked) {
+          b.disabled = true;
+          b.style.opacity = '0.4';
+        }
+      });
+    });
+  });
+</script>
+{% endblock %}

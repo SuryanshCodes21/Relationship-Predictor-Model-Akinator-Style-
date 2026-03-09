@@ -1,0 +1,236 @@
+{% extends "base.html" %}
+{% block title %}Your Result — RelationShift{% endblock %}
+
+{% block extra_styles %}
+<style>
+
+  .result-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #7c3aed, #db2777);
+    color: #fff;
+    font-family: 'Cinzel', serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    padding: 0.7rem 2.2rem;
+    border-radius: 50px;
+    box-shadow: 0 0 40px rgba(167,139,250,0.5), 0 4px 20px rgba(0,0,0,0.4);
+    margin: 1rem 0 0.5rem;
+    animation: badgePop 0.5s cubic-bezier(0.34,1.56,0.64,1) both;
+  }
+  @keyframes badgePop {
+    from { transform: scale(0.7); opacity: 0; }
+    to   { transform: scale(1);   opacity: 1; }
+  }
+
+  .duration-line {
+    color: #fbbf24;
+    font-size: 0.88rem;
+    font-style: italic;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.02em;
+  }
+
+  .confidence-wrap {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 1.75rem;
+  }
+  .confidence-wrap svg {
+    transform: rotate(-90deg);
+  }
+  .ring-bg {
+    fill: none;
+    stroke: #2e2750;
+    stroke-width: 9;
+  }
+  .ring-fill {
+    fill: none;
+    stroke: url(#ringGrad);
+    stroke-width: 9;
+    stroke-linecap: round;
+    stroke-dasharray: 283;
+    stroke-dashoffset: 283;
+    transition: stroke-dashoffset 1.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .ring-label {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .ring-label .pct {
+    font-family: 'Cinzel', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #a78bfa;
+    line-height: 1;
+  }
+  .ring-label .txt {
+    font-size: 0.55rem;
+    color: #8b7aa8;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-top: 0.25rem;
+  }
+
+  .work-on-label {
+    font-size: 0.72rem;
+    color: #8b7aa8;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin-bottom: 0.75rem;
+  }
+
+  .detail-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+    margin-bottom: 1.75rem;
+    text-align: left;
+  }
+  .detail-item {
+    background: #120f1e;
+    border: 1px solid #2e2750;
+    border-radius: 12px;
+    padding: 0.9rem 1rem;
+  }
+  .detail-item .d-label {
+    font-size: 0.68rem;
+    color: #8b7aa8;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+  .detail-item .d-value {
+    font-size: 0.9rem;
+    color: #e2d9f3;
+    font-weight: 500;
+    margin-top: 0.25rem;
+    line-height: 1.4;
+  }
+
+  .btn-outline {
+    display: inline-block;
+    padding: 0.85rem 2rem;
+    border: 1px solid #2e2750;
+    border-radius: 50px;
+    color: #8b7aa8;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: border-color 0.2s, color 0.2s;
+  }
+  .btn-outline:hover {
+    border-color: #a78bfa;
+    color: #a78bfa;
+  }
+
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="card" style="text-align:center;">
+
+  <!-- Orb -->
+  <div class="orb" style="width:90px; height:90px;"></div>
+
+  <!-- Subtitle -->
+  <p style="color:#8b7aa8; font-size:0.78rem; text-transform:uppercase; letter-spacing:0.14em; margin-bottom:0.3rem;">
+    The oracle has spoken
+  </p>
+  <h1 style="font-size:1.3rem; color:#e2d9f3; margin-bottom:0.5rem;">
+    This relationship is...
+  </h1>
+
+  <!-- Prediction badge -->
+  <div class="result-badge">{{ prediction }}</div>
+
+  <!-- Duration -->
+  <p class="duration-line">{{ duration }}</p>
+
+  <!-- Confidence ring -->
+  <div class="confidence-wrap">
+    <svg viewBox="0 0 100 100" width="120" height="120">
+      <defs>
+        <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%"   stop-color="#7c3aed" />
+          <stop offset="100%" stop-color="#db2777" />
+        </linearGradient>
+      </defs>
+      <circle class="ring-bg"   cx="50" cy="50" r="45" />
+      <circle class="ring-fill" cx="50" cy="50" r="45"
+              id="confidenceRing"
+              data-confidence="{{ confidence | default(0) }}" />
+    </svg>
+    <div class="ring-label">
+      <span class="pct" id="confidencePct">0%</span>
+      <span class="txt">certainty</span>
+    </div>
+  </div>
+
+  <!-- Description -->
+  <p style="color:#e2d9f3; line-height:1.85; margin-bottom:1.5rem; font-size:0.95rem;">
+    {{ description }}
+  </p>
+
+  <hr class="divider" />
+
+  <!-- Areas to work on -->
+  {% if details %}
+  <p class="work-on-label">Areas to work on</p>
+  <div class="detail-grid">
+    {% for key, val in details.items() %}
+    <div class="detail-item">
+      <div class="d-label">{{ key }}</div>
+      <div class="d-value">{{ val }}</div>
+    </div>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+  <!-- Action buttons -->
+  <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+    <a href="/start" class="btn-primary">✦ Try Again</a>
+    <a href="/" class="btn-outline">← Home</a>
+  </div>
+
+</div>
+
+<p class="footer">Your result is private and not stored.</p>
+{% endblock %}
+
+{% block scripts %}
+<script>
+  window.addEventListener('DOMContentLoaded', function () {
+    var ring  = document.getElementById('confidenceRing');
+    var label = document.getElementById('confidencePct');
+    if (!ring || !label) return;
+
+    var confidence   = parseFloat(ring.getAttribute('data-confidence')) || 0;
+    var circumference = 283;
+    var targetOffset  = circumference - (circumference * confidence / 100);
+
+    // Animate the ring fill
+    setTimeout(function () {
+      ring.style.strokeDashoffset = targetOffset;
+    }, 150);
+
+    // Count up the percentage label
+    var duration  = 1400;
+    var startTime = null;
+
+    function countUp(ts) {
+      if (!startTime) startTime = ts;
+      var progress = Math.min((ts - startTime) / duration, 1);
+      label.textContent = Math.round(progress * confidence) + '%';
+      if (progress < 1) requestAnimationFrame(countUp);
+    }
+
+    setTimeout(function () {
+      requestAnimationFrame(countUp);
+    }, 150);
+  });
+</script>
+{% endblock %}

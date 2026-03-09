@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block title %}RelationShift — Discover Your Connection{% endblock %}
+
+{% block content %}
+<div class="card" style="text-align:center;">
+
+  <div class="orb"></div>
+
+  <h1 style="font-size:1.8rem; color:#c4b5fd; margin-bottom:0.5rem;">
+    RelationShift
+  </h1>
+  <p style="color:var(--muted); font-size:0.95rem; margin-bottom:2rem;">
+    Answer a few questions and I will reveal the nature of your relationship.
+  </p>
+
+  <hr class="divider" />
+
+  <p style="color:var(--text); line-height:1.8; margin-bottom:2rem;">
+    Think of someone — a friend, a partner, a colleague, or anyone significant
+    in your life. I will peer through the answers you give and predict
+    the relationship that binds you.
+  </p>
+
+  <a href="{{ url_for('start') }}" class="btn-primary">
+    ✦ Begin the Reading
+  </a>
+
+  <p style="margin-top:1.5rem; color:var(--muted); font-size:0.82rem;">
+    Takes about 2 minutes &nbsp;·&nbsp; No sign-up required
+  </p>
+</div>
+
+<p class="footer">Powered by your ML model &nbsp;·&nbsp; Built with Flask</p>
+{% endblock %}

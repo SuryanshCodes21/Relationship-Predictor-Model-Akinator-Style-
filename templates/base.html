@@ -1,1 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{% block title %}RelationShift{% endblock %}</title>
 
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Raleway:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ── Reset & Base ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:        #0a0812;
+      --surface:   #120f1e;
+      --card:      #1b1630;
+      --border:    #2e2750;
+      --primary:   #a78bfa;
+      --primary-d: #7c3aed;
+      --accent:    #f472b6;
+      --text:      #e2d9f3;
+      --muted:     #8b7aa8;
+      --gold:      #fbbf24;
+      --glow:      rgba(167,139,250,0.35);
+    }
+
+    html, body {
+      height: 100%;
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Raleway', sans-serif;
+      font-weight: 400;
+      line-height: 1.6;
+    }
+
+    /* Starfield background */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 80% 60% at 50% -10%, rgba(124,58,237,0.18) 0%, transparent 70%),
+        radial-gradient(ellipse 60% 50% at 80% 110%, rgba(244,114,182,0.10) 0%, transparent 60%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .page-wrapper {
+      position: relative;
+      z-index: 1;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1rem;
+    }
+
+    /* ── Typography ── */
+    h1, h2, h3 { font-family: 'Cinzel', serif; letter-spacing: 0.04em; }
+
+    /* ── Card ── */
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 3rem 2.5rem;
+      max-width: 640px;
+      width: 100%;
+      box-shadow: 0 0 60px var(--glow), 0 4px 24px rgba(0,0,0,0.5);
+    }
+
+    /* ── Orb / Crystal Icon ── */
+    .orb {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 35% 35%, #c4b5fd, #7c3aed 60%, #4c1d95);
+      box-shadow: 0 0 30px var(--glow), 0 0 60px rgba(124,58,237,0.25);
+      margin: 0 auto 1.5rem;
+      animation: pulse 3s ease-in-out infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { box-shadow: 0 0 30px var(--glow), 0 0 60px rgba(124,58,237,0.25); }
+      50%       { box-shadow: 0 0 50px rgba(167,139,250,0.6), 0 0 90px rgba(124,58,237,0.4); }
+    }
+
+    /* ── Buttons ── */
+    .btn-primary {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--primary-d), #9333ea);
+      color: #fff;
+      font-family: 'Cinzel', serif;
+      font-size: 1rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      padding: 0.85rem 2.5rem;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 4px 20px rgba(124,58,237,0.4);
+    }
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 32px rgba(124,58,237,0.6);
+    }
+
+    .btn-option {
+      display: block;
+      width: 100%;
+      background: var(--surface);
+      color: var(--text);
+      font-family: 'Raleway', sans-serif;
+      font-size: 1rem;
+      font-weight: 500;
+      padding: 0.85rem 1.5rem;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      cursor: pointer;
+      text-align: left;
+      transition: background 0.2s, border-color 0.2s, transform 0.15s;
+      margin-bottom: 0.75rem;
+    }
+    .btn-option:hover {
+      background: #221d3a;
+      border-color: var(--primary);
+      transform: translateX(4px);
+      color: var(--primary);
+    }
+    .btn-option:last-child { margin-bottom: 0; }
+
+    /* ── Progress Bar ── */
+    .progress-bar-wrap {
+      background: var(--surface);
+      border-radius: 99px;
+      height: 6px;
+      margin-bottom: 2rem;
+      overflow: hidden;
+      border: 1px solid var(--border);
+    }
+    .progress-bar-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--primary-d), var(--accent));
+      border-radius: 99px;
+      transition: width 0.4s ease;
+    }
+
+    /* ── Divider ── */
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 1.5rem 0;
+    }
+
+    /* ── Footer ── */
+    .footer {
+      margin-top: 2rem;
+      color: var(--muted);
+      font-size: 0.8rem;
+      text-align: center;
+    }
+  </style>
+
+  {% block extra_styles %}{% endblock %}
+</head>
+<body>
+  <div class="page-wrapper">
+    {% block content %}{% endblock %}
+  </div>
+  {% block scripts %}{% endblock %}
+</body>
+</html>
