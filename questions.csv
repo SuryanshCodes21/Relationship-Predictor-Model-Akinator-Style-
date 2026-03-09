@@ -8,19 +8,19 @@ C5,Do you feel your opinions are valued during disagreements?,Communication,6,1,
 C6,Is there avoidance or silent treatment after arguments?,Communication,7,0,0,0
 C7,Is honesty prioritized in your conversations?,Communication,6,1,0,0
 C8,Do you feel blamed for most issues in the relationship?,Communication,7,0,0,0
-C9,Are conversations balanced, allowing both to speak?,Communication,5,1,0,0
+C9,Are conversations balanced allowing both to speak?,Communication,5,1,0,0
 C10,Do you avoid some topics out of fear?,Communication,5,0,0,0
 C11,Do you feel your partner interrupts you often?,Communication,5,0,0,0
 C12,Is your partner open to feedback without defensiveness?,Communication,6,1,0,0
 C13,Are apologies given and accepted genuinely?,Communication,6,1,0,0
-C14,Does your partner listen to understand, not just to respond?,Communication,7,1,0,0
+C14,Does your partner listen to understand not just to respond?,Communication,7,1,0,0
 C15,Do disagreements escalate quickly?,Communication,6,0,0,0
 C16,Is communication respectful and free of insults?,Communication,8,1,0,0
 C17,Do you clarify misunderstandings promptly?,Communication,6,1,0,0
 C18,Is sarcasm or mocking common in your conversations?,Communication,5,0,0,0
 C19,Do talks about issues end with solutions?,Communication,6,1,0,0
 C20,Are important conversations avoided?,Communication,5,0,0,0
-T1,Do you trust this person completely?,Trust,10,1,0,0
+T1,Do you trust this person completely? Trust,10,1,0,0
 T2,Has this person ever lied to you about something important?,Trust,9,0,1,0
 T3,Has your partner kept significant secrets from you?,Trust,8,0,0,0
 T4,Are you comfortable sharing passwords or private information?,Trust,5,1,0,0
